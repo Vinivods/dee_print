@@ -1,0 +1,47 @@
+.preto_suave {
+    background-color: #202020;
+}
+
+.h600 {
+    height: 600px;
+}
+
+.nav-item {
+    font-family: "Poppins";
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* margin-top: 1em; */
+    display: inline-block;
+    padding: .5em;
+    margin-left: -.5em;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    &:before, &:after {
+        position: absolute;
+        content: '';
+        border-bottom: 3px solid #219bb2;
+        border-radius: 1em;
+        bottom: .1em;
+        transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:before {
+        width: 1em;
+        transform-origin: left;
+    }
+
+    &:after {
+        width: 82%;
+        left: 1em;
+        transform: translateX(110%);
+    }
+
+    &:hover:before {
+        transform: scaleX(0.3);
+    }
+
+    &:hover:after {
+        transform: translateX(0);
+    }
+}

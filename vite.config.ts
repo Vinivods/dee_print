@@ -13,5 +13,5 @@ export default defineConfig({
     host: true,
     port: 5173,
   },
-  base: "/dee_print"
+  base: "/dee_print/"
 })
